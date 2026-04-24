@@ -17,10 +17,8 @@ if [[ ! -d "contests" ]]; then
     exit 1
 fi
 
-store="Codeforces"
-
 # Check if store folder exists
-if [[ ! -d "$store" ]]; then
+if [[ ! -d "store" ]]; then
     echo "Error: 'store' folder does not exist."
     exit 1
 fi
@@ -38,10 +36,10 @@ mkdir "$folder"
 mv "contests" "$folder/"
 
 # Move new folder inside store
-mv "$folder" "$store/"
+mv "$folder" "store/"
 
 # Change directory to store
-cd "$store" || exit
+cd "store" || exit
 
 echo "Done successfully!"
 echo "Current directory: $(pwd)"
